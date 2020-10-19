@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Generic Form </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}"/>
+    </head>
+    <body>
+        <section class="get_in_touch">
+            <h1 class="title">Get in touch</h1>
+            <form action="home" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <div class="contact-form row">
+                  
+                    <div class="form-field col-lg-6">
+                        <input id="name" class="input-text" type="text" name="name">
+                        <label for="name" class="label">name</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                        <input id="email" class="input-text" type="email" name="email">
+                        <label for="email" class="label">email</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                        <input id="company" class="input-text" type="text" name="company_name">
+                        <label for="company" class="label">company name</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                        <input id="phone" class="input-text" type="text" name="phone">
+                        <label for="phone" class="label">contact number</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                        <textarea id="message" class="input-text"  name="text"></textarea>
+                        <label for="message" class="label">message</label>
+                    </div>
+                    <div class="form-field col-lg-6" >
+                        <input class="submit-btn" type="submit" value="submit" name=""> 
+                    </div>
+                
+                </div>
+            </div>
+        </form>
+        </section>
+    </body>
+</html>
